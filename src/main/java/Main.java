@@ -1,3 +1,5 @@
+package main.java;
+
 public class Main {
     public static void main(String[] args) {
        LinkedList<Integer> list = new LinkedList<>();
@@ -8,7 +10,6 @@ public class Main {
         list.add(50);
         list.add(100);
         list.add(99);
-
         list.remove(120);
         System.out.println(list);
     }

@@ -1,5 +1,7 @@
+package main.java;
+
 public interface MyLinkedList<T> {
-    Integer size();
+    int size();
 
     void add(T element);
 
