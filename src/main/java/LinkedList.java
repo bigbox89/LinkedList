@@ -7,6 +7,7 @@ public class LinkedList<T> implements MyLinkedList {
         private Node previous; // хранение ссылки на предыдущий узел
 
         public Node(T value) {
+
             this.value = value;
         }
     }
@@ -73,7 +74,6 @@ public class LinkedList<T> implements MyLinkedList {
             return removeAt(index);
         }
         return false;
-
     }
 
     /**
@@ -109,6 +109,26 @@ public class LinkedList<T> implements MyLinkedList {
     @Override
     public void sort() {
 
+        for (int i = 0; i < this.size; ++i) {
+            for (int j = i + 1; j < this.size; ++j) {
+                if (((Comparable) this.get(i)).compareTo(((Comparable) this.get(j))) < 0) {
+                    Comparable tempData = (Comparable) this.get(i);
+                    this.set(i, (T)this.get(j));
+                    this.set(j, (T)tempData);
+                }
+
+            }
+        }
+
+    }
+
+    public T set(final int index, final T element) {
+        if (index < 0 || index >= size())
+            throw new IndexOutOfBoundsException();
+        final Node<T> item = getNode(index);
+        T tempElement = item.value;
+        item.value = element;
+        return tempElement;
     }
 
     /**
@@ -156,6 +176,10 @@ public class LinkedList<T> implements MyLinkedList {
         size = 0;
     }
 
-
-
+    public void printAll(){
+      for(int i = 0; i < size; i ++){
+          System.out.print(this.get(i) + " ");
+      }
+        System.out.println();
+    }
 }
