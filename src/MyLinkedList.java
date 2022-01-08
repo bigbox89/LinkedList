@@ -3,8 +3,12 @@ public interface MyLinkedList<T> {
 
     void add(T element);
 
-    T remove(T t);
+    boolean remove(T t);
+
+    boolean removeAt (int index);
 
     void sort();
+
+    T get (int index);
 
 }

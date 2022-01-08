@@ -8,5 +8,8 @@ public class Main {
         list.add(50);
         list.add(100);
         list.add(99);
+
+        list.remove(120);
+        System.out.println(list);
     }
 }
