@@ -1,3 +1,5 @@
+package main.java;
+
 public class LinkedList<T> implements MyLinkedList {
     private static class Node<T> {
         T value; // хранение значений разного типа
@@ -11,10 +13,10 @@ public class LinkedList<T> implements MyLinkedList {
 
     private Node<T> first; // хранение первой ссылки
     private Node<T> last; // хранение последней ссылки
-    private int size; // размер списка
+    private int size = 0; // размер списка
 
     @Override
-    public Integer size() {
+    public int size() {
         return size;
     }
 
@@ -146,5 +148,14 @@ public class LinkedList<T> implements MyLinkedList {
         }
         return -1; // возвращает -1 если элемента нет в списке
     }
+
+
+    public void clear() {
+        first = null;
+        last = null;
+        size = 0;
+    }
+
+
 
 }
