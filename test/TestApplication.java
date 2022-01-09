@@ -17,12 +17,21 @@ public class TestApplication {
     @Test
     public void sizeTest() {
         assertEquals(list.size(), 0);
-
         fillList();
-
         assertEquals(list.size(), 5);
     }
 
+    @Test
+    public void sortTest(){
+        assertEquals(list.size(), 0);
+        fillList();
+        list.sort();
+        assertEquals(list.get(0), 120 );
+        assertEquals(list.get(1), 50 );
+        assertEquals(list.get(2), 34 );
+        assertEquals(list.get(3), 11 );
+        assertEquals(list.get(4), -10 );
+    }
 
     @Test
     public void addTest(){
@@ -38,15 +47,10 @@ public class TestApplication {
     @Test
     public void removeTest() {
         fillList();
-
         assertEquals(list.size(), 5);
-
         list.remove(34);
-
         assertEquals(list.size(), 4);
-
         list.removeAt(0);
-
         assertEquals(list.size(), 3);
     }
 
