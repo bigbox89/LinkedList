@@ -1,11 +1,11 @@
-import main.java.LinkedList;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 
-public class TestApplication {
+public class TestLinkedList {
 
     private LinkedList<Integer> list = new LinkedList<>();
 
