@@ -1,4 +1,4 @@
-package main.java;
+
 
 public class LinkedList<T> implements MyLinkedList {
     private static class Node<T> {
